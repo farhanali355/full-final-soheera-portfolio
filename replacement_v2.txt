@@ -1,0 +1,260 @@
+					<div class="portfolio_list">
+						<!-- Categories View -->
+						<div id="portfolio-categories">
+							<ul class="gallery_zoom my_waypoint">
+								<!-- Category 1: Website -->
+								<a href="javascript:void(0);" onclick="showPortfolioCategory('websites')" style="width: 100%;">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" style="width: 48%; float: left; margin-right: 4%;">
+										<div class="about-card" style="cursor: pointer;">
+											<div class="image">
+												<img src="/images/wordpress-images/card.webp" alt="Website Works" />
+												<div class="main" style="height: 300px;" data-img-url="/images/wordpress-images/card.webp"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Website Works</h3>
+											</div>
+											<div class="details"></div>
+										</div>
+									</li>
+								</a>
+								
+								<!-- Category 2: Designing Work -->
+								<a href="javascript:void(0);" onclick="showPortfolioCategory('designing')" style="width: 100%;">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s" style="width: 48%; float: left;">
+										<div class="about-card" style="cursor: pointer;">
+											<div class="image">
+												<img src="./images/poster/img3.jpg" alt="Designing Works" />
+												<div class="main" style="height: 300px;" data-img-url="./images/poster/img3.jpg"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Designing Works</h3>
+											</div>
+											<div class="details"></div>
+										</div>
+									</li>
+								</a>
+								<div style="clear: both;"></div>
+							</ul>
+						</div>
+
+						<!-- Websites View -->
+						<div id="portfolio-websites" style="display: none;">
+							<div style="margin-bottom: 20px; text-align: left;">
+								<button onclick="showPortfolioCategories()" style="background-color: transparent; color: #fff; padding: 10px 0px; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 16px; display: flex; align-items: center; gap: 10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+									</svg> Back to Categories
+								</button>
+							</div>
+							<ul class="gallery_zoom my_waypoint">
+								<a href="./pages/wordpress.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="/images/wordpress-images/card.webp" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="/images/wordpress-images/card.webp">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Wordpress</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Wordpress</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+
+								<a href="./pages/shopify.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="/images/shopify-images/card.jpg" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="/images/shopify-images/card.jpg">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Shopify</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Wordpress</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+
+								<a href="./pages/wix.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="/images/wix-images/card.webp" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="/images/wix-images/card.webp">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Wix</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Wordpress</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+
+								<a href="./pages/framer.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="/images/framer-images/download.webp" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="/images/framer-images/download.webp">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Framer</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Wordpress</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+
+								<a href="./pages/webflow.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="/images/webflow-images/66baa62698e1ec9fc457d99c_video-production-services-webflow-template.png"
+													alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="/images/webflow-images/66baa62698e1ec9fc457d99c_video-production-services-webflow-template.png">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Webflow</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Wordpress</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+							</ul>
+						</div>
+
+						<!-- Designing View -->
+						<div id="portfolio-designing" style="display: none;">
+							<div style="margin-bottom: 20px; text-align: left;">
+								<button onclick="showPortfolioCategories()" style="background-color: transparent; color: #fff; padding: 10px 0px; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 16px; display: flex; align-items: center; gap: 10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+									</svg> Back to Categories
+								</button>
+							</div>
+							<ul class="gallery_zoom my_waypoint">
+
+								<a href="./pages/yt-thumbnail.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
+										<div class="about-card">
+											<div class="image">
+												<img src="videos/yt-thumbnail/img.gif" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="videos/yt-thumbnail/img.gif"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Youtube Thumbnail</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Branding</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="./pages/logo.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
+										<div class="about-card">
+											<div class="image">
+												<img src="./images/logo/img1.jpg" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="./images/logo/img1.jpg"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Logo Design</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Design</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="./pages/logoAnimation.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s">
+										<div class="about-card">
+											<div class="image">
+												<img src="./videos/logo-animated/10de4c1f-099a-4585-a49d-175b0cbfdb93.gif"
+													alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="./videos/logo-animated/10de4c1f-099a-4585-a49d-175b0cbfdb93.gif">
+												</div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Logo Animation</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Video</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="./pages/posterDesign.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
+										<div class="about-card">
+											<div class="image">
+												<img src="./images/poster/img3.jpg" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="./images/poster/img3.jpg"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Poster Design</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Branding</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+								<a href="./pages/billBoard.html">
+									<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
+										<div class="about-card">
+											<div class="image">
+												<img src="./images/billboard/img1.jpg" height="360" alt="" />
+												<div class="main" style="height: 300px;"
+													data-img-url="./images/billboard/img7.jpg"></div>
+											</div>
+											<div class="overlay"></div>
+											<div class="card-heading" style="margin-top: 15px;">
+												<h3>Bill Board</h3>
+											</div>
+											<div class="details">
+												<!-- <span>Design</span> -->
+											</div>
+										</div>
+									</li>
+								</a>
+							</ul>
+						</div>
+					</div>
