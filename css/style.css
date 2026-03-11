@@ -400,7 +400,7 @@ h6 {
 	float: left;
 	clear: both;
 	background-color: #a596967a;
-	padding: 20px 0px;
+	padding: 30px 0px;
 	border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
@@ -1859,208 +1859,229 @@ body.modal {
 /*	09) GRAX CONTACT
 /*---------------------------------------------------*/
 
+/* --- Heavy Redesign Styles --- */
+:root {
+	--contact-card-bg: rgba(0, 0, 0, 0.03);
+	--contact-card-border: rgba(0, 0, 0, 0.1);
+	--contact-input-bg: rgba(0, 0, 0, 0.05);
+	--contact-input-border: rgba(0, 0, 0, 0.1);
+	--contact-text: #333;
+	--contact-placeholder: #888;
+}
+
+body.dark {
+	--contact-card-bg: rgba(255, 255, 255, 0.05);
+	--contact-card-border: rgba(255, 255, 255, 0.1);
+	--contact-input-bg: rgba(255, 255, 255, 0.08);
+	--contact-input-border: rgba(255, 255, 255, 0.12);
+	--contact-text: #fff;
+	--contact-placeholder: #ccc;
+}
+
 .grax_tm_contact {
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
 	position: relative;
+	overflow: visible;
 	margin-bottom: 110px;
 	padding-top: 140px;
 }
 
+/* Background Glow Orbs */
+.grax_tm_contact::before,
+.grax_tm_contact::after {
+	content: '';
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	filter: blur(100px);
+	z-index: -1;
+	opacity: 0.1;
+	pointer-events: none;
+}
+
+.grax_tm_contact::before {
+	top: 0;
+	left: -100px;
+	background: #e54b4b;
+	animation: floatOrb 12s infinite alternate;
+}
+
+.grax_tm_contact::after {
+	bottom: 0;
+	right: -100px;
+	background: #3A00FF;
+	animation: floatOrb 15s infinite alternate-reverse;
+}
+
+@keyframes floatOrb {
+	from { transform: translate(0, 0) scale(1); }
+	to { transform: translate(50px, 80px) scale(1.1); }
+}
+
 .grax_tm_contact .contact_inner {
 	width: 100%;
-	height: auto;
-	clear: both;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px 20px 40px 20px;
+	display: block;
+}
+
+.grax_tm_contact .grax_tm_title_holder {
+	margin-bottom: 50px;
+}
+
+/* Glassmorphic Card */
+.contact_card {
+	background: var(--contact-card-bg);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border: 1px solid var(--contact-card-border);
+	border-radius: 30px;
+	padding: 40px;
+	box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.2);
+	position: relative;
+	z-index: 5;
+	transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	display: flex;
-	padding-top: 77px;
+	flex-direction: column;
+}
+
+body.dark .contact_card {
+	box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+}
+
+.contact_card:hover {
+	border-color: rgba(229, 75, 75, 0.3);
+	transform: translateY(-10px);
 }
 
 .grax_tm_contact .left {
-	width: 50%;
-}
-
-.grax_tm_contact .left .text {
 	width: 100%;
-	float: left;
-	margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+	float: none;
 }
 
-.grax_tm_contact .info_list {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-
-.grax_tm_contact .info_list ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-.grax_tm_contact .info_list li {
-	margin: 0px 0px 18px 0px;
-	float: left;
-	width: 100%;
-	position: relative;
-}
-
-.grax_tm_contact .info_list ul li .list_inner {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	padding-left: 27px;
-}
-
-.grax_tm_contact .info_list ul li span.first {
-	min-width: 100px;
-	display: inline-block;
-}
-
-.grax_tm_contact .info_list ul li span.second {
-	font-weight: 400 !important;
-	color: inherit !important;
-}
-
-.grax_tm_contact .info_list ul li span {
-	font-family: "Poppins";
-	font-weight: 600;
-	color: #000;
-}
-
-.grax_tm_contact .info_list ul li a {
-	text-decoration: none;
-	color: inherit !important;
-	transition: all .3s ease;
-	display: inline-block;
-	position: relative;
-}
-
-.grax_tm_contact .info_list ul li a:hover {
-	color: #000;
-}
-
-.grax_tm_contact .info_list ul li a:after {
-	content: '';
-	width: 0;
-	height: 1px;
-	position: absolute;
-	left: auto;
-	right: 0;
-	bottom: 0;
-	transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
-	background: currentColor;
-}
-
-.grax_tm_contact .info_list ul li a:hover:after {
-	width: 100%;
-	left: 0;
-	right: auto;
-}
-
-.grax_tm_contact .info_list ul li a:hover {
-	color: #000 !important;
-}
-
-.grax_tm_contact .info_list ul li .svg {
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	left: 0px;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #000;
-	margin-top: -1px;
+.grax_tm_contact .left .text p {
+	font-size: 18px;
+	line-height: 1.8;
+	color: var(--contact-text);
+	opacity: 0.8;
 }
 
 .grax_tm_contact .right {
-	width: 50%;
-	padding-left: 50px;
-}
-
-.grax_tm_contact .fields {
 	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-
-.grax_tm_contact .fields .first {
-	width: 100%;
-	margin: 0px 0px 30px 0px;
-	float: left;
+	float: none;
 }
 
 .grax_tm_contact .fields ul {
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.grax_tm_contact .fields ul li {
+/* Force Vertical Stacking & Full Width */
+.grax_tm_contact .fields .input_list {
 	width: 100%;
-	margin: 0px 0px 30px 0px;
-	float: left;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-bottom: 30px;
 }
 
-.grax_tm_contact .fields ul li input {
+.grax_tm_contact .fields .input_list input,
+.grax_tm_contact .fields .input_list textarea {
+	width: 100% !important;
+	display: block !important;
+	box-sizing: border-box !important;
+}
+
+/* Enhanced Inputs */
+.grax_tm_contact .fields .input_list input,
+.grax_tm_contact .fields .input_list textarea {
 	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .2);
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 12px 20px;
-	box-sizing: border-box;
+	background: var(--contact-input-bg);
+	border: 1px solid var(--contact-input-border);
+	border-radius: 15px;
+	padding: 20px 25px;
+	color: var(--contact-text);
+	font-size: 16px;
+	transition: all 0.3s ease;
 }
 
-.grax_tm_contact .fields ul li input:focus {
+.grax_tm_contact .fields .input_list input::placeholder,
+.grax_tm_contact .fields .input_list textarea::placeholder {
+	color: var(--contact-placeholder);
+}
+
+.grax_tm_contact .fields .input_list input:focus,
+.grax_tm_contact .fields .input_list textarea:focus {
+	background: var(--contact-card-bg);
+	border-color: #e54b4b;
+	box-shadow: 0 0 25px rgba(229, 75, 75, 0.15);
 	outline: none;
-	border: 1px solid rgba(0, 0, 0, .5);
 }
 
-.grax_tm_contact .fields .last textarea {
-	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .2);
-	height: 120px;
-	resize: none;
-	margin-bottom: 20px;
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 12px 20px;
-	box-sizing: border-box;
+.grax_tm_contact .fields .input_list textarea {
+	height: 150px;
 }
 
-.grax_tm_contact .fields .last textarea:focus {
-	outline: none;
-	border: 1px solid rgba(0, 0, 0, .5);
-}
-
-.grax_tm_contact .empty_notice {
-	color: #F52225;
-	margin-bottom: 7px;
-	display: none;
-	text-align: left;
-	font-weight: 500;
-}
-
-.grax_tm_contact .contact_error {
-	color: #F52225;
-	text-align: left;
-	font-weight: 500;
-}
-
+.grax_tm_contact .empty_notice,
 .grax_tm_contact .returnmessage {
-	color: #3A00FF;
-	margin-bottom: 7px;
-	text-align: left;
-	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+	display: none;
+}
+
+/* Premium Button */
+.grax_tm_contact .grax_tm_button {
+	width: 100%;
 }
 
 .grax_tm_contact .grax_tm_button a {
-	display: block;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background: linear-gradient(135deg, #e54b4b, #ff7b7b);
+	color: #fff !important;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 16px;
+	letter-spacing: 3px;
+	padding: 22px;
+	border-radius: 15px;
+	box-shadow: 0 15px 35px rgba(229, 75, 75, 0.4);
+	transition: all 0.4s ease;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+}
+
+.grax_tm_contact .grax_tm_button a::after {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -60%;
+	width: 20%;
+	height: 200%;
+	background: rgba(255, 255, 255, 0.2);
+	transform: rotate(30deg);
+	transition: all 0.6s ease;
+}
+
+.grax_tm_contact .grax_tm_button a:hover::after {
+	left: 120%;
+}
+
+.grax_tm_contact .grax_tm_button a:hover {
+	transform: translateY(-3px) scale(1.01);
+	box-shadow: 0 20px 45px rgba(229, 75, 75, 0.6);
+	background: linear-gradient(135deg, #ff7b7b, #e54b4b);
 }
 
 /*---------------------------------------------------*/
@@ -2157,7 +2178,19 @@ body.modal {
 
 	.custom_footer .f_nav ul {
 		flex-direction: column;
+		align-items: center;
+		width: 100%;
 		gap: 15px;
+	}
+	
+	.custom_footer .f_nav ul li {
+		width: 100%;
+		text-align: center;
+	}
+
+	.custom_footer .f_nav ul li a {
+		white-space: nowrap;
+		display: inline-block;
 	}
 }
 
@@ -3393,4 +3426,117 @@ body.dark .grax_tm_settings .cursor li .svg,
 	transform: translateY(-4px);
 	background: var(--accent);
 	box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+}
+
+/* RESPONSIVE PORTFOLIO ITEMS */
+#portfolio-categories ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.portfolio-category-item {
+    width: 100%;
+    flex: 1;
+    float: none !important;
+    margin-right: 0 !important;
+}
+
+/* COMPREHENSIVE RESPONSIVE FIXES */
+@media (max-width: 1040px) {
+    .grax_tm_topbar { 
+        display: none !important; 
+    }
+    .grax_tm_mobile_menu { 
+        display: block !important; 
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .grax_tm_all_wrap {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .grax_tm_topbar { 
+        display: none !important; 
+    }
+    .logo h3 { 
+        font-size: 24px !important; 
+        letter-spacing: 2px !important; 
+    }
+    .hero-card { 
+        flex-direction: column; 
+    }
+    .about-card .card-heading h3 { 
+        font-size: 20px; 
+    }
+    .grax_tm_hero .name { 
+        font-size: 40px !important; 
+    }
+    .grax_tm_hero .job { 
+        font-size: 15px !important; 
+        line-height: 1.5;
+    }
+    .grax_tm_mobile_menu .topbar_inner {
+        padding: 25px 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolio-categories ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+    /* Stack portfolio category blocks vertically on very small screens */
+    .portfolio-category-item {
+        width: 100% !important;
+        margin-bottom: 0px;
+    }
+    .grax_tm_hero .name { 
+        font-size: 32px !important; 
+    }
+    .grax_tm_hero .job { 
+        font-size: 13px !important; 
+        margin-bottom: 20px !important;
+    }
+    .logo h3 { 
+        font-size: 20px !important; 
+        letter-spacing: 1px !important; 
+    }
+}
+
+/* Dark Theme Adjustments for Mobile Menu */
+body.dark .grax_tm_mobile_menu .dropdown { 
+    background-color: #111; 
+    border-color: #333; 
+}
+body.dark .grax_tm_mobile_menu .dropdown .dropdown_inner ul li a { 
+    color: #fff; 
+}
+body.dark .grax_tm_mobile_menu .topbar_inner { 
+    background-color: #000; 
+    border-bottom: 1px solid #333; 
+}
+body.dark .my_trigger .hamburger .hamburger-inner::before, 
+body.dark .my_trigger .hamburger .hamburger-inner::after, 
+body.dark .my_trigger .hamburger .hamburger-inner {
+    background-color: #fff;
+}
+body.dark .grax_tm_mobile_menu .logo h3 {
+    color: #fff;
+}
+
+/* Contact Image Animation */
+@keyframes contactFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.contact-animated-img {
+    animation: contactFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
 }

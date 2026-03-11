@@ -80,16 +80,6 @@ body.dark .grax_tm_modalbox_news .details .title{
 body.dark .grax_tm_modalbox_news .description p{
 	color: #767676;
 }
-body.dark .grax_tm_contact .fields ul li input{
-	border: 1px solid rgba(255,255,255,.2);
-	background-color: transparent;
-	color: #fff;
-}
-body.dark .grax_tm_contact .fields .last textarea{
-	border: 1px solid rgba(255,255,255,.2);
-	background-color: transparent;
-	color: #fff;
-}
 body.dark .grax_tm_contact .info_list ul li span{
 	color: #fff;
 }
