@@ -300,7 +300,7 @@
 										</div>
 										<div class="overlay"></div>
 										<div class="card-heading" style="margin-top: 15px;">
-											<h3>Website Works</h3>
+											<h3>Development Portfolio</h3>
 										</div>
 										<div class="details"></div>
 									</div>
@@ -316,7 +316,7 @@
 										</div>
 										<div class="overlay"></div>
 										<div class="card-heading" style="margin-top: 15px;">
-											<h3>Designing Works</h3>
+											<h3>Designing Portfolio</h3>
 										</div>
 										<div class="details"></div>
 									</div>
@@ -800,60 +800,76 @@
 					<!-- /NEWS -->
 
 					<!-- CONTACT -->
+					<style>
+						/* Side-by-side on Desktop */
+						@media (min-width: 992px) {
+							.contact_inner { flex-wrap: nowrap !important; }
+							.contact_inner .left, .contact_inner .right { min-width: 0 !important; }
+						}
+						/* Stacking on Tablet & Mobile */
+						@media (max-width: 991px) {
+							.contact_inner { flex-wrap: wrap !important; gap: 40px !important; }
+							.contact_inner .left, .contact_inner .right { flex: 1 1 100% !important; min-width: 100% !important; }
+							.contact_main_box { padding: 40px 25px !important; border-radius: 25px !important; }
+							.contact_text_top h1 { font-size: 36px !important; text-align: center; }
+						}
+					</style>
 					<div class="grax_tm_contact" id="contact">
-						<div class="container">
-							<div class="contact_inner" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; padding: 40px 0;">
-								
-								<!-- Left Column: Animated Image -->
-								<div class="left wow fadeInLeft" data-wow-duration="1s" style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
-									<img src="img/new-images/contact-img.png" alt="Contact Us" class="contact-animated-img" style="max-width: 100%; height: auto; border-radius: 20px;">
-								</div>
+						<div class="container" style="max-width: 1400px;">
+							<div class="contact_main_box" style="background-color: #0c0c0c; border-radius: 35px; padding: 60px 60px; border: 1px solid #1a1a1a; box-shadow: 0 40px 100px rgba(0,0,0,0.5); margin-top: 40px;">
+								<div class="contact_inner" style="display: flex; align-items: center; justify-content: center; gap: 80px;">
+									
+									<!-- Left Column: Animated Image -->
+									<div class="left wow fadeInLeft" data-wow-duration="1s" style="flex: 1; display: flex; justify-content: center;">
+										<img src="img/new-images/contact-img.png" alt="Contact Us" class="contact-animated-img" style="max-width: 100%; height: auto; border-radius: 20px;">
+									</div>
 
-								<!-- Right Column: Text and Form -->
-								<div class="right wow fadeInRight" data-wow-duration="1s" style="flex: 1.2; min-width: 300px;">
-									<div class="contact_content_wrapper">
-										<!-- New Heading Structure -->
-										<div class="contact_text_top" style="margin-bottom: 30px;">
-											<h1 style="font-size: 48px; color: white; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px;">Contact Us</h1>
-										</div>
+									<!-- Right Column: Text and Form -->
+									<div class="right wow fadeInRight" data-wow-duration="1s" style="flex: 1.2;">
+										<div class="contact_content_wrapper">
+											<!-- New Heading Structure -->
+											<div class="contact_text_top" style="margin-bottom: 30px;">
+												<h1 style="font-size: 48px; color: white; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px;">Contact Us</h1>
+											</div>
 
-										<!-- Form with Labels -->
-										<div class="fields">
-											<form action="/" method="post" class="contact_form" id="contact_form">
-												<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-													
-												<div class="input_list_new" style="display: flex; flex-direction: column; gap: 18px;">
-													<div class="input_group">
-														<label for="name" style="color: white; font-weight: 700; display: block; margin-bottom: 10px; font-size: 15px;">Name</label>
-														<input id="name" type="text" placeholder="John Doe" name="from_name" required 
-															style="width: 100%; background-color: transparent; border: 1px solid #333; color: white; border-radius: 10px; padding: 15px 20px; font-family: 'Poppins', sans-serif; outline: none; font-size: 15px;">
+											<!-- Form with Labels -->
+											<div class="fields">
+												<form action="/" method="post" class="contact_form" id="contact_form">
+													<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+														
+													<div class="input_list_new" style="display: flex; flex-direction: column; gap: 18px;">
+														<div class="input_group">
+															<label for="name" style="color: #eee; font-weight: 600; display: block; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Name</label>
+															<input id="name" type="text" placeholder="John Doe" name="from_name" required 
+																style="width: 100%; background-color: #161616; border: 1px solid #222; color: white; border-radius: 12px; padding: 16px 20px; font-family: 'Poppins', sans-serif; outline: none; transition: border-color 0.3s;">
+														</div>
+
+														<div class="input_group">
+															<label for="email" style="color: #eee; font-weight: 600; display: block; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Email Address</label>
+															<input id="email" type="email" placeholder="example@mail.com" name="from_email" required 
+																style="width: 100%; background-color: #161616; border: 1px solid #222; color: white; border-radius: 12px; padding: 16px 20px; font-family: 'Poppins', sans-serif; outline: none; transition: border-color 0.3s;">
+														</div>
+
+														<div class="input_group">
+															<label for="message" style="color: #eee; font-weight: 600; display: block; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Message</label>
+															<textarea id="message" placeholder="What is the issue?" name="message" required 
+																style="width: 100%; background-color: #161616; border: 1px solid #222; color: white; border-radius: 12px; padding: 16px 20px; height: 140px; font-family: 'Poppins', sans-serif; outline: none; resize: none; transition: border-color 0.3s;"></textarea>
+														</div>
 													</div>
 
-													<div class="input_group">
-														<label for="email" style="color: white; font-weight: 700; display: block; margin-bottom: 10px; font-size: 15px;">Email Address</label>
-														<input id="email" type="email" placeholder="example@mail.com" name="from_email" required 
-															style="width: 100%; background-color: transparent; border: 1px solid #333; color: white; border-radius: 10px; padding: 15px 20px; font-family: 'Poppins', sans-serif; outline: none; font-size: 15px;">
+													<!-- Button Row -->
+													<div class="button_row" style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+														<button id="send_message" type="submit" 
+															style="background-color: #f76b6a; color: white; padding: 16px 45px; border: none; border-radius: 12px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s ease; flex: 1; min-width: 170px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(247, 107, 106, 0.3);">
+															Submit Now
+														</button>
 													</div>
-
-													<div class="input_group">
-														<label for="message" style="color: white; font-weight: 700; display: block; margin-bottom: 10px; font-size: 15px;">Message</label>
-														<textarea id="message" placeholder="What is the issue?" name="message" required 
-															style="width: 100%; background-color: transparent; border: 1px solid #333; color: white; border-radius: 10px; padding: 15px 20px; height: 140px; font-family: 'Poppins', sans-serif; outline: none; resize: none; font-size: 15px;"></textarea>
-													</div>
-												</div>
-
-												<!-- Button Row -->
-												<div class="button_row" style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
-													<button id="send_message" type="submit" 
-														style="background-color: #f76b6a; color: white; padding: 15px 45px; border: none; border-radius: 10px; font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.3s ease; flex: 1; min-width: 170px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(247, 107, 106, 0.4);">
-														Submit
-													</button>
-												</div>
-											</form>
+												</form>
+											</div>
 										</div>
 									</div>
-								</div>
 
+								</div>
 							</div>
 						</div>
 					</div>
