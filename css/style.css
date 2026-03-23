@@ -874,7 +874,7 @@ h6 {
 	left: 0px;
 	right: 0px;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top center;
 	background-size: cover;
 	border-radius: 5px;
 	box-shadow: 0px 0px 40px rgb(0 0 0 / 20%);
@@ -971,7 +971,7 @@ h6 {
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 135px 0px 140px 0px;
+	padding: 50px 0px 60px 0px;
 }
 
 .grax_tm_progress_part .part_inner {
@@ -1338,7 +1338,7 @@ h6 {
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 80px 20px;
+	padding: 30px 20px;
 	position: relative;
 	background: transparent !important;
 }
@@ -1886,7 +1886,7 @@ body.dark {
 	position: relative;
 	overflow: visible;
 	margin-bottom: 110px;
-	padding-top: 140px;
+	padding-top: 50px;
 }
 
 /* Background Glow Orbs */
@@ -2317,7 +2317,7 @@ body.dark .contact_card {
 	position: absolute;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	background-image: url(..//img/portfolio/ss-1.png);
 }
 
@@ -3175,7 +3175,7 @@ body.dark .grax_tm_settings .cursor li .svg,
 	/* 50% se 100vh karein */
 	background-image: url('../img/portfolio/ss-1.png') !important;
 	background-size: cover !important;
-	background-position: center !important;
+	background-position: top center !important;
 	background-repeat: no-repeat !important;
 }
 
